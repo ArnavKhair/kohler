@@ -1,0 +1,639 @@
+{
+  "banner": "For prototype purposes only",
+  "brands": [
+    {
+      "label": "Kohler",
+      "href": "https://www.kohler.com/en",
+      "current": true
+    },
+    {
+      "label": "Kohler Health",
+      "href": "https://www.kohlerhealth.com/"
+    },
+    {
+      "label": "Reveal",
+      "href": "#"
+    },
+    {
+      "label": "Sterling",
+      "href": "https://www.sterlingplumbing.com/"
+    },
+    {
+      "label": "Ann Sacks",
+      "href": "https://www.annsacks.com/"
+    },
+    {
+      "label": "Kallista",
+      "href": "https://www.kallista.com/"
+    },
+    {
+      "label": "Robern",
+      "href": "https://www.robern.com/"
+    },
+    {
+      "label": "KLAFS",
+      "href": "#"
+    },
+    {
+      "label": "Kast",
+      "href": "#"
+    },
+    {
+      "label": "Home Energy",
+      "href": "#"
+    },
+    {
+      "label": "Destinations",
+      "href": "#"
+    }
+  ],
+  "logo": {
+    "label": "KOHLER",
+    "href": "./"
+  },
+  "nav": [
+    {
+      "label": "Bathroom",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Shop",
+            "links": [
+              {
+                "label": "Toilets",
+                "href": "https://www.kohler.com/en/products/toilets"
+              },
+              {
+                "label": "Bathroom Faucets",
+                "href": "https://www.kohler.com/en/products/bathroom-faucets"
+              },
+              {
+                "label": "Showers",
+                "href": "#"
+              },
+              {
+                "label": "Bathtubs",
+                "href": "https://www.kohler.com/en/products/bathtubs"
+              },
+              {
+                "label": "Bathroom Sinks",
+                "href": "#"
+              },
+              {
+                "label": "Vanities",
+                "href": "#"
+              },
+              {
+                "label": "Mirrors & Medicine Cabinets",
+                "href": "#"
+              },
+              {
+                "label": "Accessories",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Explore",
+            "links": [
+              {
+                "label": "Bathroom Collections",
+                "href": "https://www.kohler.com/en/products/kohler-collections/bathroom"
+              },
+              {
+                "label": "Bathroom Sets",
+                "href": "https://www.kohler.com/en/products/bathroom-bundles"
+              },
+              {
+                "label": "Bestsellers",
+                "href": "https://www.kohler.com/en/products/best-sellers"
+              },
+              {
+                "label": "Bathroom Design Services",
+                "href": "https://www.kohler.com/en/services/bathroom-design-services"
+              }
+            ]
+          }
+        ],
+        "feature": {
+          "eyebrow": "New collection",
+          "title": "Kohler x Studio McGee",
+          "cta": "Explore Claude",
+          "href": "https://www.kohler.com/en/products/kohler-collections/studio-mcgee-collection/claude-bathroom",
+          "image": "assets/images/Large-Double-Featured-Content-Cards-aae97602__Large-Double-Featured-Content-Cards-Desktop.webp"
+        }
+      }
+    },
+    {
+      "label": "Kitchen",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Shop",
+            "links": [
+              {
+                "label": "Kitchen Faucets",
+                "href": "https://www.kohler.com/en/products/kitchen-faucets"
+              },
+              {
+                "label": "Kitchen Sinks",
+                "href": "#"
+              },
+              {
+                "label": "Garbage Disposals",
+                "href": "#"
+              },
+              {
+                "label": "Water Filtration",
+                "href": "#"
+              },
+              {
+                "label": "Kitchen Accessories",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Explore",
+            "links": [
+              {
+                "label": "Kitchen Collections",
+                "href": "#"
+              },
+              {
+                "label": "Kitchen Inspiration",
+                "href": "#"
+              },
+              {
+                "label": "Bestsellers",
+                "href": "https://www.kohler.com/en/products/best-sellers"
+              }
+            ]
+          }
+        ],
+        "feature": {
+          "eyebrow": "Shop",
+          "title": "Kitchen Faucets",
+          "cta": "Shop Kitchen Faucets",
+          "href": "https://www.kohler.com/en/products/kitchen-faucets",
+          "image": "assets/images/Large-Double-Featured-Content-Cards-aak31040__Large-Double-Featured-Content-Cards-Desktop.webp"
+        }
+      }
+    },
+    {
+      "label": "Health & Wellness",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Experiences",
+            "links": [
+              {
+                "label": "KOHLER Saunas",
+                "href": "https://www.kohler.com/en/products/wellness-experiences/saunas"
+              },
+              {
+                "label": "Ice Bath",
+                "href": "https://www.kohler.com/en/remedy"
+              },
+              {
+                "label": "Bathtubs",
+                "href": "https://www.kohler.com/en/products/bathtubs"
+              },
+              {
+                "label": "Steam Showers",
+                "href": "#"
+              }
+            ]
+          },
+          {
+            "title": "Kohler Health",
+            "links": [
+              {
+                "label": "Dekoda",
+                "href": "https://www.kohler.com/en/products/health"
+              },
+              {
+                "label": "Smart Toilets",
+                "href": "#"
+              }
+            ]
+          }
+        ],
+        "feature": {
+          "eyebrow": "Introducing",
+          "title": "Dekoda by Kohler Health℠",
+          "cta": "Explore Dekoda",
+          "href": "https://www.kohler.com/en/products/health",
+          "image": "assets/images/Home-Page-Hero-Video-Full-Bleed-aai55266__Home-Page-Hero-Video-Full-Bleed-Desktop.webp"
+        }
+      }
+    },
+    {
+      "label": "Commercial",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Commercial",
+            "links": [
+              {
+                "label": "Commercial Products",
+                "href": "#"
+              },
+              {
+                "label": "Hospitality",
+                "href": "#"
+              },
+              {
+                "label": "Healthcare",
+                "href": "#"
+              },
+              {
+                "label": "Case Studies",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Sustainability",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Sustainability",
+            "links": [
+              {
+                "label": "Our Commitments",
+                "href": "#"
+              },
+              {
+                "label": "Water Conservation",
+                "href": "#"
+              },
+              {
+                "label": "Sustainable Products",
+                "href": "#"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Inspiration",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Inspiration",
+            "links": [
+              {
+                "label": "Bathroom Ideas",
+                "href": "#"
+              },
+              {
+                "label": "Kitchen Ideas",
+                "href": "#"
+              },
+              {
+                "label": "Design Trends",
+                "href": "#"
+              },
+              {
+                "label": "Collections",
+                "href": "https://www.kohler.com/en/products/kohler-collections"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Services",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Services",
+            "links": [
+              {
+                "label": "Bathroom Design Services",
+                "href": "https://www.kohler.com/en/services/bathroom-design-services"
+              },
+              {
+                "label": "Installation Services",
+                "href": "#"
+              },
+              {
+                "label": "Find a Store",
+                "href": "https://www.kohler.com/en/locations"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Parts & Support",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Support",
+            "links": [
+              {
+                "label": "Replacement Parts",
+                "href": "#"
+              },
+              {
+                "label": "Help & FAQ",
+                "href": "https://assist.kohler.com/"
+              },
+              {
+                "label": "Warranty",
+                "href": "https://assist.kohler.com/en/warranty"
+              },
+              {
+                "label": "Product Registration",
+                "href": "https://www.kohler.com/en/my-account/product-registration"
+              },
+              {
+                "label": "Contact Us",
+                "href": "https://www.kohler.com/en/support/contact"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "For Professionals",
+      "href": "#",
+      "menu": {
+        "columns": [
+          {
+            "title": "Professionals",
+            "links": [
+              {
+                "label": "Kohler Partner Network",
+                "href": "https://www.kohler.com/en/for-professionals/how-to-become-a-kohler-partner"
+              },
+              {
+                "label": "Literature",
+                "href": "https://www.kohler.com/en/for-professionals/literature"
+              },
+              {
+                "label": "Samples",
+                "href": "https://www.kohler.com/en/products/samples/shop-samples"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "utils": [
+    {
+      "label": "Find a Store",
+      "icon": "pin",
+      "action": "store"
+    },
+    {
+      "label": "Search",
+      "icon": "search",
+      "action": "search"
+    },
+    {
+      "label": "Menu",
+      "icon": "menu",
+      "action": "menu"
+    }
+  ],
+  "newsletter": {
+    "text": "Enter your email to receive news, promotions, and information about Kohler.",
+    "placeholder": "Email Address",
+    "submit": "Submit",
+    "invalid": "Please enter a valid email address.",
+    "thanks": "Thank you for signing up.",
+    "thanksNote": "Prototype: nothing was sent or stored."
+  },
+  "social": [
+    {
+      "label": "Facebook",
+      "abbr": "Fb",
+      "href": "#"
+    },
+    {
+      "label": "Twitter",
+      "abbr": "X",
+      "href": "#"
+    },
+    {
+      "label": "Instagram",
+      "abbr": "Ig",
+      "href": "#"
+    },
+    {
+      "label": "Pinterest",
+      "abbr": "Pi",
+      "href": "#"
+    },
+    {
+      "label": "YouTube",
+      "abbr": "Yt",
+      "href": "https://www.youtube.com/c/KohlerUSA"
+    },
+    {
+      "label": "LinkedIn",
+      "abbr": "In",
+      "href": "#"
+    }
+  ],
+  "footerCols": [
+    {
+      "title": "Stores",
+      "links": [
+        {
+          "label": "About KOHLER Stores",
+          "href": "https://www.kohler.com/en/locations/kohler-stores"
+        },
+        {
+          "label": "Find a Store",
+          "href": "https://www.kohler.com/en/locations"
+        },
+        {
+          "label": "KOHLER Store Careers",
+          "href": "https://www.kohler.com/en/locations/stores-career"
+        },
+        {
+          "label": "KOHLER Collection",
+          "href": "https://kohlercollection.com/"
+        }
+      ]
+    },
+    {
+      "title": "Resources",
+      "links": [
+        {
+          "label": "Suppliers",
+          "href": "https://www.kohlercompany.com/suppliers/"
+        },
+        {
+          "label": "Careers",
+          "href": "https://www.kohlercompany.com/careers/"
+        },
+        {
+          "label": "Press Room",
+          "href": "https://www.kohler.com/en/press-room"
+        },
+        {
+          "label": "Literature",
+          "href": "https://www.kohler.com/en/for-professionals/literature"
+        },
+        {
+          "label": "Samples",
+          "href": "https://www.kohler.com/en/products/samples/shop-samples"
+        },
+        {
+          "label": "Kohler Partner Network",
+          "href": "https://www.kohler.com/en/for-professionals/how-to-become-a-kohler-partner"
+        },
+        {
+          "label": "Authorized Sellers",
+          "href": "https://www.kohler.com/en/support/authorized-sellers"
+        }
+      ]
+    },
+    {
+      "title": "Help",
+      "links": [
+        {
+          "label": "Help & FAQ",
+          "href": "https://assist.kohler.com/"
+        },
+        {
+          "label": "Track Your Order",
+          "href": "https://www.kohler.com/en/orders/order-status"
+        },
+        {
+          "label": "Shipping & Deliveries",
+          "href": "https://www.kohler.com/en/help/shipping-and-deliveries"
+        },
+        {
+          "label": "Returns",
+          "href": "https://www.kohler.com/en/help/return-policy"
+        },
+        {
+          "label": "Product Registration",
+          "href": "https://www.kohler.com/en/my-account/product-registration"
+        },
+        {
+          "label": "Contact Us",
+          "href": "https://www.kohler.com/en/support/contact"
+        },
+        {
+          "label": "Warranty",
+          "href": "https://assist.kohler.com/en/warranty"
+        },
+        {
+          "label": "Terms & Conditions",
+          "href": "https://www.kohler.com/en/legal/terms-and-conditions"
+        },
+        {
+          "label": "Care & Cleaning",
+          "href": "https://www.kohler.com/en/support/how-to-use-kohler-cleaning-products"
+        }
+      ]
+    },
+    {
+      "title": "About Us",
+      "links": [
+        {
+          "label": "Who We Are",
+          "href": "https://www.kohler.com/en/about-us/who-we-are"
+        },
+        {
+          "label": "Our Brands/Businesses",
+          "href": "https://www.kohler.com/en/about-us/our-business-groups"
+        },
+        {
+          "label": "Heritage",
+          "href": "https://www.kohler.com/en/about-us/our-heritage"
+        },
+        {
+          "label": "Our Impact",
+          "href": "https://www.kohler.com/en/about-us/our-impact"
+        }
+      ]
+    }
+  ],
+  "legal": [
+    {
+      "label": "Privacy",
+      "href": "https://www.kohler.com/en/legal/privacy-policy"
+    },
+    {
+      "label": "Cookies Settings",
+      "href": "#"
+    },
+    {
+      "label": "Legal",
+      "href": "https://www.kohler.com/en/legal"
+    },
+    {
+      "label": "Site Map",
+      "href": "https://www.kohler.com/en/site-map"
+    },
+    {
+      "label": "Catalog Groups",
+      "href": "https://www.kohler.com/en/shop/pt-index"
+    },
+    {
+      "label": "Terms",
+      "href": "https://www.kohler.com/en/legal/terms-and-conditions"
+    },
+    {
+      "label": "Accessibility",
+      "href": "https://www.kohler.com/en/legal/accessibility"
+    }
+  ],
+  "copyright": "©Kohler Co. All Rights Reserved",
+  "disclaimer": "For prototype purposes only. This is an unofficial redesign study and is not affiliated with or endorsed by Kohler Co. Kohler® is a trademark of Kohler Co.",
+  "search": {
+    "placeholder": "Search products, collections and more",
+    "popular": [
+      "Toilets",
+      "Kitchen faucets",
+      "Bathtubs",
+      "Showerheads",
+      "Saunas",
+      "Claude collection"
+    ],
+    "note": "Prototype: search is not connected."
+  },
+  "store": {
+    "title": "Find a Store Near You",
+    "text": "Enter a City, State or ZIP Code to find a store near you.",
+    "label": "City, State or ZIP",
+    "cta": "Search",
+    "sample": [
+      {
+        "name": "KOHLER Store (sample)",
+        "address": "123 Sample Ave, Anytown, ST 00000",
+        "hours": "Open today 10am–6pm"
+      },
+      {
+        "name": "KOHLER Store (sample)",
+        "address": "456 Example Blvd, Anytown, ST 00000",
+        "hours": "Open today 10am–7pm"
+      }
+    ],
+    "note": "Sample results. Store lookup is not connected in this prototype."
+  }
+}
