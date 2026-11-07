@@ -1,0 +1,81 @@
+/* Design tokens extracted from the saved kohler.com landing page CSS (:root custom properties).
+   Font note: Helvetica Now Text is licensed and not in the source files; system Helvetica is the stand-in (not bundled; see README). */
+:root{
+  --font-primary:"Helvetica Now Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /* color: primary */
+  --c-white:#fff; --c-primary-700:#494949; --c-primary-800:#212121; --c-black:#000;
+  /* color: gray */
+  --c-gray-100:#f9f9f9; --c-gray-200:#e6e6e6; --c-gray-300:#cdcdcd; --c-gray-400:#989898; --c-gray-500:#757575;
+  /* color: brand + semantic */
+  --c-brand-600:#002e49; --c-brand-05:rgb(24 104 165/5%); --c-brand-10:rgb(24 104 165/10%);
+  --c-error:#d10000; --c-success:#4a9232; --c-info:#00bce5;
+  --c-overlay-light:rgb(230 230 230/75%); --c-overlay-medium:rgb(0 0 0/50%); --c-overlay-dark:rgb(0 0 0/75%);
+  /* color: finish swatches */
+  --c-thunder-gray:#5b5c56; --c-cashmere:#666; --c-sandbar:#bfbaae; --c-ice-gray:#c1c5c3;
+  --c-almond:#e1decf; --c-dune:#e2e3db; --c-biscuit:#e9e7da; --c-swatch-white:#f4f4f4;
+  /* elevation, radius, motion */
+  --shadow-regular:1px 1px 20px 0 rgb(0 0 0/15%); --shadow-irregular:0 10px 20px 0 rgb(0 0 0/7%);
+  --radius-none:0; --radius-xs:4px; --radius-s:5px; --radius-m:10px; --radius-full:50%;
+  --dur-instant:100ms; --dur-fast:300ms; --dur-moderate:600ms; --dur-slow:1000ms;
+  /* grid (desktop, 12 col) */
+  --grid-gutter:min(4.12vw,79px); --grid-width:min(94.8vw,1820px);
+  --grid-margin:calc((100vw - var(--grid-width))/2); --grid-cols:12;
+  --grid-col:calc((var(--grid-width) - (var(--grid-cols) - 1)*var(--grid-gutter))/var(--grid-cols));
+  /* spacing (desktop) */
+  --sp-4xs:2px; --sp-3xs:4px; --sp-2xs:12px; --sp-xs:16px; --sp-s:20px; --sp-m:24px; --sp-l:32px; --sp-xl:40px; --sp-2xl:64px; --sp-3xl:80px; --sp-4xl:120px;
+  /* surfaces (inferred: Kohler's "bg-charcoal" section class; exact value not in saved CSS, primary-800 used) */
+  --c-surface-dark:var(--c-primary-800); --c-error-on-dark:color-mix(in srgb,var(--c-error) 60%,var(--c-white)); --c-on-dark:var(--c-white); --c-on-dark-muted:var(--c-gray-300);
+  /* metal finish swatches (INFERRED for the web apps; Kohler's CSS only defines ceramic swatches) */
+  --c-finish-chrome:#c9ccce; --c-finish-black:#2b2b2b; --c-finish-brass:#b8955a; --c-finish-nickel:#a9a69c; --c-finish-glass:#dfe6e8;
+  /* focus (from Kohler's input :focus rule) */
+  --c-focus:#66afe9; --shadow-focus:0 0 8px rgb(102 175 233/60%);
+  /* media */
+  --ratio-hero:1600/955; --ratio-feature:1492/1121; --ratio-banner:1876/1058; --ratio-portrait:1200/1597;
+  /* breakpoints (reference only): tablet <=1023px, mobile <=639px */
+}
+@media (max-width:1023px){:root{--grid-gutter:8.22vw;--grid-width:90.4vw;--grid-cols:6;
+  --sp-4xs:2px;--sp-3xs:4px;--sp-2xs:8px;--sp-xs:12px;--sp-s:16px;--sp-m:20px;--sp-l:24px;--sp-xl:32px;--sp-2xl:40px;--sp-3xl:64px;--sp-4xl:80px}}
+@media (max-width:639px){:root{--grid-gutter:8.37vw;--grid-width:92.12vw;--sp-2xs:12px;--sp-xs:16px;--sp-s:20px;--sp-m:24px;--sp-l:32px;--sp-xl:40px;--sp-2xl:64px;--sp-3xl:80px;--sp-4xl:120px}}
+
+/* type scale (desktop). weight / size / line-height / letter-spacing */
+:root{
+  --t-display-l:300 200px/.8 var(--font-primary); --ls-display-l:-12px;
+  --t-display-m:300 140px/.86 var(--font-primary); --ls-display-m:-9.8px;
+  --t-h1:300 100px/1.1 var(--font-primary); --ls-h1:-7.5px;
+  --t-h2:300 60px/68px var(--font-primary); --ls-h2:-3.1px;
+  --t-h3:300 45px/1.24 var(--font-primary); --ls-h3:-3.2px;
+  --t-h4:300 36px/1.22 var(--font-primary); --ls-h4:-1.7px;
+  --t-h5:300 32px/1.25 var(--font-primary); --ls-h5:-1.6px;
+  --t-h6:300 26px/1.31 var(--font-primary); --ls-h6:-1.5px;
+  --t-title-l:300 24px/1.25 var(--font-primary); --ls-title-l:-1.2px;
+  --t-title-m:300 20px/1.4 var(--font-primary); --ls-title-m:-1px;
+  --t-title-s:300 16px/1.5 var(--font-primary); --ls-title-s:-.8px;
+  --t-p-l:400 20px/1.4 var(--font-primary); --ls-p-l:-.65px;
+  --t-p-m:400 16px/1.5 var(--font-primary); --ls-p-m:-.55px;
+  --t-p-s:400 14px/1.57 var(--font-primary); --ls-p-s:-.45px;
+  --t-p-xs:400 12px/1.67 var(--font-primary); --ls-p-xs:-.5px;
+  --t-btn-l:500 18px/1.44 var(--font-primary); --ls-btn-l:-.35px;
+  --t-btn-m:500 16px/1.5 var(--font-primary); --ls-btn-m:-.35px;
+  --t-btn-s:500 14px/1.57 var(--font-primary); --ls-btn-s:-.3px;
+  --t-label-m:400 16px/1.5 var(--font-primary); --ls-label-m:-.4px;
+  --t-label-medium-m:500 16px/1.5 var(--font-primary); --ls-label-medium-m:-.4px;
+  --t-brand-switcher:700 11px/1.4545 var(--font-primary); --ls-brand-switcher:1px;
+  --t-nav:400 15px/1.47 var(--font-primary); --ls-nav:-.4px;
+  --t-nav-selected:500 15px/1.47 var(--font-primary);
+  --t-overlay-title:300 50px/1.08 var(--font-primary); --ls-overlay-title:-3px;
+  --t-tag-m:500 12px/1 var(--font-primary); --ls-tag-m:.65px;
+  --t-caption-m:400 14px/1.4286 var(--font-primary);
+}
+@media (max-width:1023px){:root{
+  --t-h2:300 40px/48px var(--font-primary); --ls-h2:-2.2px;
+  --t-h4:300 32px/40px var(--font-primary); --ls-h4:-2.2px;
+}}
+
+/* Fallback tracking: Kohler's letter-spacing is tuned for Helvetica Now Text. When that font is not installed
+   (js/render.js adds .has-brand-font if it is), headings in Helvetica Neue/Arial collide, so loosen them ~45%. */
+:root:not(.has-brand-font){
+  --ls-display-l:-6.5px; --ls-display-m:-5.4px; --ls-h1:-4px; --ls-h2:-1.7px; --ls-h3:-1.6px; --ls-h4:-.9px;
+  --ls-h5:-.8px; --ls-h6:-.7px; --ls-title-l:-.5px; --ls-title-m:-.4px; --ls-title-s:-.3px; --ls-overlay-title:-1.6px;
+  --ls-p-l:-.3px; --ls-p-m:-.2px; --ls-p-s:-.15px;
+}
+@media (max-width:1023px){:root:not(.has-brand-font){--ls-h2:-1.2px;--ls-h4:-1.1px}}

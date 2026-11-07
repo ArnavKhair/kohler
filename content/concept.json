@@ -1,0 +1,320 @@
+{
+  "page": {
+    "title": "KOHLER Kitchen and Bathroom (concept)",
+    "note": "Structure follows Arnav's Figma sitemap ('Arnav - Web App'). Open with ?edit to see how each section maps."
+  },
+  "sections": [
+    {
+      "type": "teaser",
+      "id": "studio-mcgee",
+      "layout": "center",
+      "note": "SITEMAP 1, New collections. The newest collection leads the page as the H1.",
+      "eyebrow": "New collection",
+      "title": "Kohler x Studio McGee",
+      "desc": "Discover modern classic harmony in the all-new Claude™ bathroom collection, our latest release in collaboration with designer Shea McGee.",
+      "image": {
+        "src": "assets/images/Home-Page-Hero-Video-Full-Bleed-aaj61614__Home-Page-Hero-Video-Full-Bleed-Desktop.webp",
+        "alt": "Woman walking past a freestanding bathtub"
+      },
+      "actions": [
+        {
+          "label": "Shop Claude",
+          "href": "https://www.kohler.com/en/products/kohler-collections/studio-mcgee-collection/shop-all-claude-bathroom",
+          "style": "light"
+        },
+        {
+          "label": "Explore Claude",
+          "href": "https://www.kohler.com/en/products/kohler-collections/studio-mcgee-collection/claude-bathroom",
+          "style": "on-photo"
+        }
+      ],
+      "heading": 1
+    },
+    {
+      "type": "teaser",
+      "id": "hero-collections",
+      "layout": "center",
+      "note": "SITEMAP 2, Signature lineup(s). ASSUMPTION: maps to the KOHLER® Collections section on the live page. Confirm, or send the lineup names.",
+      "title": "KOHLER® Collections",
+      "desc": "Curated to be seen. Designed to be experienced.",
+      "image": {
+        "src": "assets/images/Home-Page-Hero-Video-Full-Bleed-aak30996__Home-Page-Hero-Video-Full-Bleed-Desktop.webp",
+        "alt": "Bathroom vanity with mirror"
+      },
+      "actions": [
+        {
+          "label": "Shop Collections",
+          "href": "https://www.kohler.com/en/products/kohler-collections/bathroom",
+          "style": "light"
+        },
+        {
+          "label": "Explore Collections",
+          "href": "https://www.kohler.com/en/products/kohler-collections",
+          "style": "on-photo"
+        }
+      ],
+      "eyebrow": "Signature lineup"
+    },
+    {
+      "type": "featureCards",
+      "id": "shop-categories",
+      "title": "Browse by Product",
+      "note": "SITEMAP 3, Browsing by products.",
+      "cards": [
+        {
+          "title": "Bestsellers",
+          "link": {
+            "label": "Shop Bestsellers",
+            "href": "https://www.kohler.com/en/products/best-sellers"
+          },
+          "image": {
+            "src": "assets/images/Large-Double-Featured-Content-Cards-aag35780__Large-Double-Featured-Content-Cards-Desktop.webp",
+            "alt": "Shower with body sprays"
+          }
+        },
+        {
+          "title": "Toilets",
+          "link": {
+            "label": "Shop Toilets",
+            "href": "https://www.kohler.com/en/products/toilets"
+          },
+          "image": {
+            "src": "assets/images/Large-Double-Featured-Content-Cards-aag77373__Large-Double-Featured-Content-Cards-Desktop.webp",
+            "alt": "Black smart toilet against a marble wall"
+          }
+        },
+        {
+          "title": "Bathroom Faucets",
+          "link": {
+            "label": "Shop Bathroom Faucets",
+            "href": "https://www.kohler.com/en/products/bathroom-faucets"
+          },
+          "image": {
+            "src": "assets/images/Large-Double-Featured-Content-Cards-aae97602__Large-Double-Featured-Content-Cards-Desktop.webp",
+            "alt": "Marble vanity with a gold faucet"
+          }
+        },
+        {
+          "title": "Kitchen Faucets",
+          "link": {
+            "label": "Shop Kitchen Faucets",
+            "href": "https://www.kohler.com/en/products/kitchen-faucets"
+          },
+          "image": {
+            "src": "assets/images/Large-Double-Featured-Content-Cards-aak31040__Large-Double-Featured-Content-Cards-Desktop.webp",
+            "alt": "Kitchen with a gold faucet and black sink"
+          }
+        }
+      ]
+    },
+    {
+      "type": "experienceHub",
+      "id": "see-in-your-bathroom",
+      "note": "SITEMAP 4, See Kohler in your bathroom [NEW]. Groups the services and the two new web apps. Kohler view is mobile only (a QR code on desktop).",
+      "title": "See Kohler in Your Bathroom",
+      "desc": "Try products in your own space before you buy, with your phone camera, with AI, or with help from our designers and stores.",
+      "tiles": [
+        {
+          "id": "view",
+          "size": "wide",
+          "title": "Kohler View",
+          "desc": "Use your phone camera to place KOHLER products in your bathroom, at real scale.",
+          "image": {
+            "src": "assets/images/Large-Double-Featured-Content-Cards-aag77373__Large-Double-Featured-Content-Cards-Desktop.webp",
+            "alt": "Smart toilet in a marble bathroom"
+          },
+          "action": "view",
+          "label": "Try It on This Phone",
+          "labelDesktop": "Use It on Your Phone"
+        },
+        {
+          "id": "viz",
+          "size": "wide",
+          "title": "Kohler Viz",
+          "desc": "Describe or recreate your bathroom, add the products you love, and see your dream bathroom designed with AI.",
+          "image": {
+            "src": "assets/images/Home-Page-Hero-Video-Full-Bleed-aaj61614__Home-Page-Hero-Video-Full-Bleed-Desktop.webp",
+            "alt": "Bathroom with a freestanding tub"
+          },
+          "href": "viz.html",
+          "label": "Design With AI"
+        },
+        {
+          "id": "sets",
+          "title": "Bathroom Sets",
+          "desc": "Shop complete sets of faucets, toilets, showers and accessories.",
+          "image": {
+            "src": "assets/images/Inspired-Banner-with-Image-version-3-and-4-aad84172__KOHLER-Inspired-Banner-With-Image-variation-3-and-4-ML-Max.webp",
+            "alt": "Glass-walled shower room"
+          },
+          "href": "https://www.kohler.com/en/products/bathroom-bundles",
+          "label": "Explore Sets"
+        },
+        {
+          "id": "design",
+          "title": "KOHLER Bathroom Design",
+          "desc": "Work one-on-one with our designers on a quick update or a complete remodel.",
+          "image": {
+            "src": "assets/images/Inspired-Banner-with-Image-version-3-and-4-aaf30563__KOHLER-Inspired-Banner-With-Image-variation-3-and-4-ML-Max.webp",
+            "alt": "Woman beside a freestanding tub"
+          },
+          "href": "https://www.kohler.com/en/services/bathroom-design-services",
+          "label": "Learn More"
+        },
+        {
+          "id": "store",
+          "title": "Find a Local Store",
+          "desc": "See products in person and get design help at your KOHLER® Store.",
+          "image": {
+            "src": "assets/images/Banner-with-Image-Variation-One-aae67468__Banner-with-Image-Variation-One-Desktop.webp",
+            "alt": "Hands at a vessel sink"
+          },
+          "action": "store",
+          "label": "Find a Store"
+        }
+      ]
+    },
+    {
+      "type": "teaser",
+      "id": "dekoda",
+      "layout": "bottom",
+      "note": "SITEMAP 5, Dekoda.",
+      "title": "Introducing Dekoda by Kohler Health℠",
+      "desc": "An at-home health innovation that decodes everyday bathroom signals into meaningful insights.",
+      "image": {
+        "src": "assets/images/Home-Page-Hero-Video-Full-Bleed-aai55266__Home-Page-Hero-Video-Full-Bleed-Desktop.webp",
+        "alt": "Dekoda device resting on water"
+      },
+      "actions": [
+        {
+          "label": "Explore Dekoda",
+          "href": "https://www.kohler.com/en/products/health",
+          "style": "light"
+        }
+      ]
+    },
+    {
+      "type": "featureCards",
+      "id": "wellness",
+      "note": "SITEMAP 6, Saunas, Ice Baths.",
+      "cards": [
+        {
+          "title": "KOHLER Saunas",
+          "link": {
+            "label": "Explore Saunas",
+            "href": "https://www.kohler.com/en/products/wellness-experiences/saunas"
+          },
+          "image": {
+            "src": "assets/images/Large-Double-Featured-Content-Cards-aai21563__Large-Double-Featured-Content-Cards-Desktop.webp",
+            "alt": "Outdoor sauna"
+          }
+        },
+        {
+          "title": "Ice Bath",
+          "link": {
+            "label": "Explore Ice Bath",
+            "href": "https://www.kohler.com/en/remedy"
+          },
+          "image": {
+            "src": "assets/images/Large-Double-Featured-Content-Cards-aag43565__Large-Double-Featured-Content-Cards-Desktop.webp",
+            "alt": "Close-up of a dark tub"
+          }
+        }
+      ],
+      "title": "Saunas & Ice Baths"
+    },
+    {
+      "type": "intro",
+      "id": "wellness-intro",
+      "dark": true,
+      "note": "Not in the sitemap. Hidden, kept for reference.",
+      "eyebrow": "Health & Wellness",
+      "title": "Wellness, Designed Into Every Day",
+      "desc": "From deep-soak bathing to saunas, cold plunges and at-home health insights, explore the rituals that turn a bathroom into a place to recover.",
+      "hidden": true
+    },
+    {
+      "type": "teaser",
+      "id": "bathing",
+      "hidden": true,
+      "note": "Not in the sitemap. Hidden, kept for reference.",
+      "title": "Explore the Depths of KOHLER Bathing",
+      "desc": "Discover bathtubs designed to transform ordinary routines into new wellness rituals. This is where time stops and rejuvenation begins.",
+      "image": {
+        "src": "assets/images/Home-Page-Hero-Video-Full-Bleed-aaj88077__Home-Page-Hero-Video-Full-Bleed-Desktop.webp",
+        "alt": "Overhead view of a soaking tub"
+      },
+      "actions": [
+        {
+          "label": "Explore Bathtubs",
+          "href": "https://www.kohler.com/en/products/bathtubs",
+          "style": "light"
+        }
+      ]
+    },
+    {
+      "type": "bannerSplit",
+      "id": "bathroom-sets",
+      "textSide": "left",
+      "note": "Not in the sitemap. Hidden, kept for reference.",
+      "title": "Bathroom Sets",
+      "desc": "Explore KOHLER bathroom bundles to shop complete sets of faucets, toilets and seats, showers, and accessories. Find everything you need for a seamless bathroom upgrade.",
+      "image": {
+        "src": "assets/images/Inspired-Banner-with-Image-version-3-and-4-aad84172__KOHLER-Inspired-Banner-With-Image-variation-3-and-4-ML-Max.webp",
+        "alt": "Glass-walled shower room"
+      },
+      "actions": [
+        {
+          "label": "Explore Sets",
+          "href": "https://www.kohler.com/en/products/bathroom-bundles",
+          "style": "on-dark"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "type": "bannerSplit",
+      "id": "design-help",
+      "textSide": "right",
+      "note": "Not in the sitemap. Hidden, kept for reference.",
+      "title": "Design Help, Online or In Store",
+      "desc": "Work one-on-one with our professional designers to visualize a quick update or a complete remodel, or visit your KOHLER® Store for hands-on product selection and design assistance.",
+      "image": {
+        "src": "assets/images/Inspired-Banner-with-Image-version-3-and-4-aaf30563__KOHLER-Inspired-Banner-With-Image-variation-3-and-4-ML-Max.webp",
+        "alt": "Woman beside a freestanding tub"
+      },
+      "actions": [
+        {
+          "label": "Explore Design Services",
+          "href": "https://www.kohler.com/en/services/bathroom-design-services",
+          "style": "light"
+        },
+        {
+          "label": "Find a Local Store",
+          "href": "https://www.kohler.com/en/locations/browse-all-stores",
+          "style": "on-dark"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "type": "bannerCaption",
+      "id": "visit-store",
+      "hidden": true,
+      "note": "Not in the sitemap. Hidden, kept for reference.",
+      "title": "Bring Design to Life",
+      "desc": "Take your inspiration further and explore the possibilities in person at your KOHLER® Store. Helpful associates can provide product selection and design assistance, so you can bring your vision to life.",
+      "image": {
+        "src": "assets/images/Banner-with-Image-Variation-One-aae67468__Banner-with-Image-Variation-One-Desktop.webp",
+        "alt": "Hands at a vessel sink"
+      },
+      "actions": [
+        {
+          "label": "Find a Local Store",
+          "href": "https://www.kohler.com/en/locations/browse-all-stores",
+          "style": "on-dark"
+        }
+      ]
+    }
+  ]
+}

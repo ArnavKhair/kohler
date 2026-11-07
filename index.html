@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><link rel="icon" href="data:,">
+<title>Kohler redesign study | prototype hub</title>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components.css">
+<style>
+  .hub-head{padding-block:var(--sp-3xl) var(--sp-2xl);display:grid;gap:var(--sp-s)}
+  .hub-head h1{margin:0;font:var(--t-h2);letter-spacing:var(--ls-h2);color:var(--c-primary-800)}
+  .hub-head p{margin:0;max-width:760px}
+  .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--sp-m)}
+  .hub-card{display:grid;gap:var(--sp-2xs);align-content:start;padding:var(--sp-l);border:1px solid var(--c-gray-200);border-radius:var(--radius-xs);transition:box-shadow var(--dur-fast),border-color var(--dur-fast)}
+  .hub-card:hover{box-shadow:var(--shadow-regular);border-color:transparent}
+  .hub-card h2{margin:0;font:var(--t-title-l);letter-spacing:var(--ls-title-l);color:var(--c-primary-800)}
+  .hub-card p{margin:0;font:var(--t-p-s);letter-spacing:var(--ls-p-s)}
+  .hub-card .tag{justify-self:start}
+  .hub-footer .footer__legal{margin-top:0;border-top:0;padding-top:0}
+  .hub-card .meta{display:flex;gap:var(--sp-2xs);flex-wrap:wrap;margin-top:var(--sp-2xs)}
+  .hub-card .meta a{font:var(--t-btn-s);letter-spacing:var(--ls-btn-s);color:var(--c-brand-600);text-decoration:underline}
+  .compare{padding-block:var(--sp-2xl) var(--sp-3xl)}
+  .compare__bar{display:flex;justify-content:space-between;align-items:end;gap:var(--sp-m);flex-wrap:wrap;margin-bottom:var(--sp-m)}
+  .compare__bar h2{margin:0;font:var(--t-h4);letter-spacing:var(--ls-h4);color:var(--c-primary-800)}
+  .compare__panes{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-m)}
+  .compare__pane{display:grid;gap:var(--sp-2xs)}
+  .compare__frame{position:relative;height:75vh;overflow:hidden;border:1px solid var(--c-gray-200);border-radius:var(--radius-xs);background:var(--c-gray-100)}
+  .compare__frame iframe{position:absolute;top:0;left:0;width:calc(100% / var(--s));height:calc(75vh / var(--s));border:0;transform:scale(var(--s));transform-origin:0 0}
+  @media (max-width:1023px){.compare__panes{grid-template-columns:1fr}}
+</style>
+</head><body>
+<div class="concept-banner" role="note">For prototype purposes only</div>
+<main class="container">
+  <header class="hub-head">
+    <p class="t-caption" style="margin:0">Kohler redesign study</p>
+    <h1>Prototype hub</h1>
+    <p>A rebuild of the kohler.com landing page on Kohler's own design tokens and a restructured concept. Copy lives in <code>content/*.json</code>. Add <code>?edit</code> to any page URL to label sections and show the reason for each change.</p>
+  </header>
+
+  <div class="hub-grid">
+    <a class="hub-card" href="current.html"><span class="tag">Baseline</span><h2>Landing page, current</h2><p>Today's kohler.com home page (saved Nov 7, 2026), rebuilt section by section with real copy, links and images.</p></a>
+    <a class="hub-card" href="concept.html"><span class="tag">Draft</span><h2>Landing page, concept</h2><p>Proposed restructure: shop paths come sooner, wellness is grouped, services are merged. 9 sections become 7.</p></a>
+    <a class="hub-card" href="concept.html?edit"><span class="tag">Review</span><h2>Concept with notes</h2><p>The concept page with each section labelled and the reasoning shown next to it. Use it in critiques.</p></a>
+    <a class="hub-card" href="design-system.html"><span class="tag">System</span><h2>Design system</h2><p>Tokens (color, type, spacing, grid) and every component, rendered.</p></a>
+  </div>
+
+  <section class="compare" aria-labelledby="cmp-h">
+    <div class="compare__bar">
+      <h2 id="cmp-h">Before / after</h2>
+      <div class="tabs" role="tablist" aria-label="Preview scale">
+        <button class="tab" role="tab" aria-selected="true" data-scale=".4">Overview</button>
+        <button class="tab" role="tab" aria-selected="false" data-scale=".6">Detail</button>
+      </div>
+    </div>
+    <div class="compare__panes" style="--s:.4">
+      <div class="compare__pane"><span class="t-caption">Current</span><div class="compare__frame"><iframe src="current.html" title="Current landing page" loading="lazy"></iframe></div></div>
+      <div class="compare__pane"><span class="t-caption">Concept</span><div class="compare__frame"><iframe src="concept.html" title="Concept landing page" loading="lazy"></iframe></div></div>
+    </div>
+  </section>
+</main>
+<footer class="footer hub-footer"><div class="container"><div class="footer__legal">For prototype purposes only. Unofficial redesign study by Arnav, not affiliated with or endorsed by Kohler Co. Kohler® is a trademark of Kohler Co.</div></div></footer>
+<script>
+  document.querySelectorAll('[data-scale]').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('[data-scale]').forEach(x => x.setAttribute('aria-selected', x === b));
+    document.querySelector('.compare__panes').style.setProperty('--s', b.dataset.scale);
+  }));
+</script>
+</body></html>

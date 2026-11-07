@@ -1,0 +1,620 @@
+{
+ "_note": "Kohler Viz prototype data. Products are REAL KOHLER products (names, SKUs, product pages); images are hotlinked from Kohler's scene7 image server. Sets, scenes and copy are illustrative.",
+ "copy": {
+  "intro": {
+   "eyebrow": "Kohler Viz",
+   "title": "Design Your Dream Bathroom With AI",
+   "desc": "Describe or recreate your bathroom space, choose the KOHLER products you love, and see them come together in your room.",
+   "cta": "Get Started",
+   "steps": [
+    "Recreate your bathroom",
+    "Collect your products",
+    "See them in your space"
+   ]
+  },
+  "step1": {
+   "eyebrow": "Step 1 of 2",
+   "title": "Recreate Your Bathroom",
+   "desc": "Describe your bathroom, or build it using the floorplan builder. This tells Kohler Viz everything you have in the room today."
+  },
+  "step2": {
+   "eyebrow": "Step 2 of 2",
+   "title": "Collect the Products You Want to Pair",
+   "desc": "Start from a complete bathroom set, or pick your own products for each fixture in your room."
+  },
+  "result": {
+   "title": "See These in Your Bathroom",
+   "label": "Sample photo. Pins show where your products would go."
+  },
+  "saved": {
+   "title": "Combination Saved",
+   "designers": "Found something you like? You can talk to Kohler designers to bring these to life.",
+   "designersCta": "Talk to a Designer",
+   "designersHref": "https://www.kohler.com/en/services/bathroom-design-services",
+   "stores": "Look at these products in person at local stores around you.",
+   "storesCta": "Find a Local Store"
+  },
+  "ai": {
+   "endpoint": "https://image.pollinations.ai/prompt/",
+   "model": "turbo",
+   "timeoutMs": 30000,
+   "label": "AI-generated illustration. Products are approximate; see the list for the real KOHLER products.",
+   "disclosure": "Kohler Viz sends your room description and product names (never your photos) to Pollinations, a free third-party AI image service, to draw this preview.",
+   "failed": "The AI render is unavailable right now, so you are seeing a sample photo instead.",
+   "limited": "The free AI model is busy or rate-limited (about one image every 40 seconds), so you are seeing a sample photo for now. Try Regenerate in a moment."
+  }
+ },
+ "roomTypes": [
+  "Primary bath",
+  "Guest bath",
+  "Powder room",
+  "Kids' bath"
+ ],
+ "styles": [
+  "Modern",
+  "Classic",
+  "Warm minimal",
+  "Spa-like",
+  "Industrial"
+ ],
+ "sizes": [
+  "Small (under 40 sq ft)",
+  "Medium (40–100 sq ft)",
+  "Large (100+ sq ft)"
+ ],
+ "keywords": {
+  "toilet": [
+   "toilet",
+   "wc",
+   "commode",
+   "loo"
+  ],
+  "vanity": [
+   "vanity",
+   "sink",
+   "basin",
+   "counter"
+  ],
+  "faucet": [
+   "faucet",
+   "tap"
+  ],
+  "tub": [
+   "tub",
+   "bath ",
+   "bathtub",
+   "soaking",
+   "soak"
+  ],
+  "shower": [
+   "shower",
+   "rain"
+  ],
+  "mirror": [
+   "mirror",
+   "medicine cabinet"
+  ]
+ },
+ "describeExample": "A small guest bathroom with a white toilet, a single vanity with a chrome faucet, a mirror above it and a shower over the tub. Warm wood floor, lots of daylight.",
+ "stages": [
+  "Reading your room",
+  "Placing your products",
+  "Matching finishes",
+  "Lighting the scene"
+ ],
+ "collections": {
+  "toilet": [
+   {
+    "id": "claude",
+    "name": "Claude™ by Studio McGee",
+    "products": [
+     {
+      "id": "k-35960",
+      "sku": "K-35960",
+      "name": "Claude™ Two-Piece Elongated Toilet",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/35960-0_ISO_d2c0130645_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/35960",
+      "finishType": "body",
+      "finishes": [
+       "white",
+       "almond"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/35960-0_ISO_d2c0130645_rgb?wid=800&fmt=png-alpha"
+     },
+     {
+      "id": "k-38493",
+      "sku": "K-38493",
+      "name": "Claude™ One-Piece Smart Toilet",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/38493-0_ISO_d2c0130702_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/38493",
+      "finishType": "body",
+      "finishes": [
+       "white",
+       "almond"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/38493-0_ISO_d2c0130702_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "veil",
+    "name": "Veil™",
+    "products": [
+     {
+      "id": "k-1381",
+      "sku": "K-1381",
+      "name": "Veil™ One-Piece Elongated Dual-Flush Toilet",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/1381-0_ISO_d2c0024428_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/1381",
+      "finishType": "body",
+      "finishes": [
+       "white",
+       "thunder"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/1381-0_ISO_d2c0024428_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   }
+  ],
+  "vanity": [
+   {
+    "id": "claude",
+    "name": "Claude™ by Studio McGee",
+    "products": [
+     {
+      "id": "k-39305",
+      "sku": "K-39305",
+      "name": "Claude™ 24\" Vanity with Sink & Quartz Top",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/39305-0_ISO_d2c0125575_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/39305",
+      "finishType": "body",
+      "finishes": [
+       "white"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/39305-0_ISO_d2c0125575_rgb?wid=800&fmt=png-alpha"
+     },
+     {
+      "id": "k-39308",
+      "sku": "K-39308",
+      "name": "Claude™ 48\" Vanity with Sink & Quartz Top",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/39308-0_ISO_d2c0125792_rgb?wid=600",
+      "pageUrl": "https://www.kohler.com/en/products/vanities/shop-vanities/claude-by-studio-mcgee-48-bathroom-vanity-cabinet-with-sink-and-quartz-top-39308",
+      "finishType": "body",
+      "finishes": [
+       "white"
+      ],
+      "cutout": null
+     }
+    ]
+   }
+  ],
+  "faucet": [
+   {
+    "id": "purist",
+    "name": "Purist®",
+    "products": [
+     {
+      "id": "k-14406-4",
+      "sku": "K-14406-4",
+      "name": "Purist® Widespread Sink Faucet, Lever Handles",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/aag09166_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/14406-4",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/aag09166_rgb?wid=800&fmt=png-alpha"
+     },
+     {
+      "id": "k-14402-4a",
+      "sku": "K-14402-4A",
+      "name": "Purist® Single-Handle Sink Faucet",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/aag09712_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/14402-4A",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/aag09712_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "artifacts",
+    "name": "Artifacts®",
+    "products": [
+     {
+      "id": "k-72762-9m",
+      "sku": "K-72762-9M",
+      "name": "Artifacts® Single-Handle Sink Faucet",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/aag29944_rgb?wid=600",
+      "pageUrl": "https://www.studiokohler.com/products/bathroom/faucets/bathroom-sink-faucets/72762-9m",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/aag29944_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "components",
+    "name": "Components®",
+    "products": [
+     {
+      "id": "k-77958-4a",
+      "sku": "K-77958-4A",
+      "name": "Components® Single-Handle Sink Faucet",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/aag36369_rgb?wid=600",
+      "pageUrl": "https://www.studiokohler.com/products/bathroom/faucets/bathroom-sink-faucets/77958-4a",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/aag36369_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   }
+  ],
+  "tub": [
+   {
+    "id": "claude",
+    "name": "Claude™ by Studio McGee",
+    "products": [
+     {
+      "id": "k-38859",
+      "sku": "K-38859",
+      "name": "Claude™ 65-3/4\" Freestanding Bath",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/38859-0_ISO_d2c0132112_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/38859",
+      "finishType": "body",
+      "finishes": [
+       "white",
+       "almond"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/38859-0_ISO_d2c0132112_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "artifacts",
+    "name": "Artifacts®",
+    "products": [
+     {
+      "id": "k-21000-w",
+      "sku": "K-21000-W",
+      "name": "Artifacts® 66-1/8\" Freestanding Bath",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/zac71792_rgb?wid=600",
+      "pageUrl": "https://www.studiokohler.com/products/bathroom/bathing/21000-w",
+      "finishType": "body",
+      "finishes": [
+       "white"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/zac71792_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "underscore",
+    "name": "Underscore®",
+    "products": [
+     {
+      "id": "k-1130",
+      "sku": "K-1130",
+      "name": "Underscore® 60\" x 32\" Drop-In Bath",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/1130-0_ISO_d2c0071524_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/1130",
+      "finishType": "body",
+      "finishes": [
+       "white",
+       "biscuit",
+       "thunder"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/1130-0_ISO_d2c0071524_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   }
+  ],
+  "shower": [
+   {
+    "id": "castia",
+    "name": "Castia® by Studio McGee",
+    "products": [
+     {
+      "id": "k-ts38264-4y",
+      "sku": "K-TS38264-4Y",
+      "name": "Castia® Rite-Temp® Shower Trim Kit",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/aah00492_rgb?wid=600",
+      "pageUrl": "https://www.kohler.com/en/products/showers/shop-bath-shower-faucets/castia-by-studio-mcgee-rite-temp-shower-trim-kit-2-5-gpm-ts38264-4y",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/aah00492_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "purist",
+    "name": "Purist®",
+    "products": [
+     {
+      "id": "k-939-g",
+      "sku": "K-939-G",
+      "name": "Purist® Single-Function Showerhead",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/939-G-CP_ISO_d2c0018510_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/939-G",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/939-G-CP_ISO_d2c0018510_rgb?wid=800&fmt=png-alpha"
+     },
+     {
+      "id": "k-t14423-4",
+      "sku": "K-T14423-4",
+      "name": "Purist® Rite-Temp® Valve Trim",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/zaa97272_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/T14423-4",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/zaa97272_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "artifacts",
+    "name": "Artifacts®",
+    "products": [
+     {
+      "id": "k-72774-g",
+      "sku": "K-72774-G",
+      "name": "Artifacts® Single-Function Showerhead",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/72774-G-CP_ISO_d2c0019208_rgb?wid=600",
+      "pageUrl": "https://www.studiokohler.com/products/bathroom/x/72774-g",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/72774-G-CP_ISO_d2c0019208_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   }
+  ],
+  "mirror": [
+   {
+    "id": "claude",
+    "name": "Claude™ by Studio McGee",
+    "products": [
+     {
+      "id": "k-39338",
+      "sku": "K-39338",
+      "name": "Claude™ 24\" x 40\" Framed Mirror",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/39338-CPL_ISO_d2c0130320_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/39338",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/39338-CPL_ISO_d2c0130320_rgb?wid=800&fmt=png-alpha"
+     },
+     {
+      "id": "k-39312",
+      "sku": "K-39312",
+      "name": "Claude™ 24\" x 64\" Framed Mirror",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/39312-CPL_ISO_d2c0130349_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/39312",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/39312-CPL_ISO_d2c0130349_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "essential",
+    "name": "Essential",
+    "products": [
+     {
+      "id": "k-31368",
+      "sku": "K-31368",
+      "name": "Essential 32\" Round Framed Mirror",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/31368-CPL_ISO_d2c0144729_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/31368",
+      "finishType": "metal",
+      "finishes": [
+       "chrome",
+       "black",
+       "brass",
+       "nickel"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/31368-CPL_ISO_d2c0144729_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   },
+   {
+    "id": "verdera",
+    "name": "Verdera™",
+    "products": [
+     {
+      "id": "k-99003",
+      "sku": "K-99003",
+      "name": "Verdera™ 20\" x 30\" Medicine Cabinet",
+      "image": "https://kohler.scene7.com/is/image/PAWEB/99003-NA_ISO_d2c0146292_rgb?wid=600",
+      "pageUrl": "https://la.kohler.com/en/product-detail/99003",
+      "finishType": "metal",
+      "finishes": [
+       "chrome"
+      ],
+      "cutout": "https://kohler.scene7.com/is/image/PAWEB/99003-NA_ISO_d2c0146292_rgb?wid=800&fmt=png-alpha"
+     }
+    ]
+   }
+  ]
+ },
+ "sets": [
+  {
+   "id": "claude-set",
+   "name": "Claude™ Modern Classic",
+   "collection": "Claude™ & Castia® by Studio McGee",
+   "desc": "Warm, timeless pieces from the Studio McGee collaboration.",
+   "scene": "suite",
+   "items": {
+    "toilet": "k-35960",
+    "vanity": "k-39308",
+    "faucet": "k-14406-4",
+    "tub": "k-38859",
+    "shower": "k-ts38264-4y",
+    "mirror": "k-39338"
+   },
+   "finish": {
+    "metal": "brass",
+    "body": "white"
+   }
+  },
+  {
+   "id": "purist-set",
+   "name": "Purist Minimal",
+   "collection": "Purist® with Veil™ & Claude™",
+   "desc": "Clean lines and architectural forms for a calm, spa-like bath.",
+   "scene": "spa",
+   "items": {
+    "toilet": "k-1381",
+    "vanity": "k-39305",
+    "faucet": "k-14402-4a",
+    "shower": "k-939-g",
+    "mirror": "k-31368"
+   },
+   "finish": {
+    "metal": "black",
+    "body": "white"
+   }
+  },
+  {
+   "id": "artifacts-set",
+   "name": "Artifacts Heritage",
+   "collection": "Artifacts® with Verdera™",
+   "desc": "Vintage-inspired details: a cast-iron freestanding bath and classic trim.",
+   "scene": "suite",
+   "items": {
+    "faucet": "k-72762-9m",
+    "shower": "k-72774-g",
+    "tub": "k-21000-w",
+    "mirror": "k-99003",
+    "toilet": "k-1381"
+   },
+   "finish": {
+    "metal": "nickel",
+    "body": "white"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "id": "suite",
+   "label": "Primary suite",
+   "image": "assets/images/Inspired-Banner-with-Image-version-3-and-4-aaf30563__KOHLER-Inspired-Banner-With-Image-variation-3-and-4-ML-Max.webp",
+   "pins": {
+    "vanity": [
+     14,
+     70
+    ],
+    "faucet": [
+     69,
+     45
+    ],
+    "tub": [
+     64,
+     74
+    ],
+    "shower": [
+     12,
+     30
+    ]
+   }
+  },
+  {
+   "id": "spa",
+   "label": "Spa shower room",
+   "image": "assets/images/Inspired-Banner-with-Image-version-3-and-4-aad84172__KOHLER-Inspired-Banner-With-Image-variation-3-and-4-ML-Max.webp",
+   "pins": {
+    "shower": [
+     50,
+     40
+    ],
+    "tub": [
+     30,
+     68
+    ],
+    "vanity": [
+     88,
+     74
+    ],
+    "faucet": [
+     85,
+     55
+    ],
+    "toilet": [
+     71,
+     72
+    ],
+    "mirror": [
+     93,
+     38
+    ]
+   }
+  },
+  {
+   "id": "powder",
+   "label": "Powder room",
+   "image": "assets/images/Home-Page-Hero-Video-Full-Bleed-aak30996__Home-Page-Hero-Video-Full-Bleed-Desktop.webp",
+   "pins": {
+    "mirror": [
+     37,
+     18
+    ],
+    "faucet": [
+     45,
+     47
+    ],
+    "vanity": [
+     52,
+     74
+    ]
+   }
+  }
+ ]
+}

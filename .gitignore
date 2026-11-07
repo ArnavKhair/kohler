@@ -1,0 +1,12 @@
+# Reference only: Kohler's saved page is not ours to publish
+source/
+# Never commit font files (licensed)
+*.ttf
+*.otf
+*.ttc
+*.woff
+*.woff2
+# OS / editor
+.DS_Store
+Thumbs.db
+__pycache__/
