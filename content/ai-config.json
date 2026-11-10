@@ -1,0 +1,11 @@
+{
+ "_note": "Kohler Viz AI render settings. proxyUrl is the team's Vercel function (see kohler-viz-proxy). Leave it empty to use the free Pollinations text-only fallback. NEVER put the Google API key or the team passcode in this file or anywhere in this repo.",
+ "proxyUrl": "",
+ "imageSize": "1K",
+ "aspectRatio": "5:4",
+ "maxAngles": 4,
+ "concurrency": 2,
+ "timeoutMs": 120000,
+ "cooldownMs": 15000,
+ "dailyLimit": 40
+}

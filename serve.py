@@ -10,7 +10,8 @@ import http.server, sys
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
 PAGE = '/concept.html'
 ALLOWED_FILES = {PAGE, '/viz.html', '/view.html', '/tokens.css', '/components.css', '/apps.css',
-                 '/content/chrome.json', '/content/concept.json', '/content/viz.json'}
+                 '/content/chrome.json', '/content/concept.json', '/content/viz.json',
+                 '/content/ai-config.json', '/content/ai-config.local.json'}
 ALLOWED_DIRS = ('/js/', '/assets/')
 
 class Handler(http.server.SimpleHTTPRequestHandler):

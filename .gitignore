@@ -10,3 +10,6 @@ source/
 .DS_Store
 Thumbs.db
 __pycache__/
+
+# Local-only AI settings (e.g. a localhost proxy URL)
+content/ai-config.local.json

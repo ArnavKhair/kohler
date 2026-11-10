@@ -39,19 +39,26 @@ The server exposes only the concept landing page (`/`), `viz.html`, `view.html` 
   (`kohler.scene7.com/is/image/PAWEB/...`). If Kohler changes an image, the card falls back to a drawing. Kohler View
   uses the transparent PNG versions (`fmt=png-alpha`) as AR cut-outs. The Claude™ 48" vanity image isn't transparent, so
   it uses a drawing in AR.
-- **Free AI render:** "See these in your bathroom" calls **Pollinations** (`image.pollinations.ai`, mini `turbo`
-  model). It's free and needs no API key. It isn't a Kohler service.
-  - Only a **text prompt** is sent: room type, size and style, floorplan doors/windows/fan, product names and the
-    description. Photos never leave the device, and the UI says so.
-  - **Free-tier limits:**
-    - About **one image every 40 seconds** per visitor/IP. The app waits out the cooldown, with a countdown on
-      Regenerate and a "Waiting for the free AI model" message.
-    - Pollinations **rejects `fetch()` from browsers** (it asks for a Turnstile token), so the image loads as a plain
-      `<img>`.
-    - The free tier adds a small "pollinations.ai" watermark.
-  - If the service is busy, rate-limited or down, the result falls back to the curated sample photo with product pins
-    and shows a notice.
-  - Saved combinations keep the image URL and fall back to the sample photo if it no longer loads.
+- **Realistic render pipeline** (from "V2 Kohler Viz Realistic Bathroom Render Plan", Nov 8, 2026):
+  - **3D layout scene** (`js/scene3d.js`, three.js 0.160 from jsDelivr): the room is rebuilt from the plan data, with walls, door and window openings, and colour-coded stand-ins.
+    - Stand-in heights come from `SIZE3D` in `js/fixtures.js`. These are typical sizes; replace them with Kohler's data feed.
+    - Up to four preset cameras: from the door, from the far wall, and close-ups of two fixtures.
+    - Step 1 shows a live 3D preview under the floorplan.
+    - **Export Layout Images** downloads a layout PNG and a depth PNG per camera, plus the scene JSON.
+    - Describe mode lays the described fixtures against the walls of a typical room.
+  - **AI render:** for each angle, the layout image, the real product photos and a short caption (which assigns each image a role) go to the team's Vercel function. The function lives in the separate repo `kohler-viz-proxy`.
+    - It calls Google's Nano Banana 2.1 model and holds the API key.
+    - The function URL is set in `content/ai-config.json` (`proxyUrl`). That file must never hold the key or the passcode.
+    - The first render asks for the team passcode and keeps it in sessionStorage for that tab only.
+  - **Photo mode** (describe mode with photos): the user's first photo is sent instead of the layout, but only after a consent checkbox. Without consent, photos stay on the device.
+  - **Fallback:** a failed request is retried once. If it still fails, the app shows the 3D layout with the real product cut-outs. The sample photo with pins is still available as a tab.
+  - **Product fidelity (Phase 3):** the transparent product cut-outs can be laid over any angle at each product's projected position. Each angle also lists the real packshots it contains.
+  - **Labels:** every AI image carries the "approximate preview" label.
+  - **Limits:** a cooldown on Regenerate (`cooldownMs`) and a per-device daily cap (`dailyLimit`). The function adds caching and a per-IP limit.
+  - AI images are kept in memory only. After a reload the app shows the 3D layout and asks you to Regenerate.
+- **Free fallback (no `proxyUrl`):** Pollinations (`image.pollinations.ai`, `turbo` model), text only.
+  - The prompt now includes wall placement from the floorplan and a camera phrase (render plan Phase 0). Only the first angle is AI-rendered.
+  - About one image every 40 seconds, loaded as an `<img>` because Pollinations rejects `fetch()`. It adds a watermark.
 - **Still mocked:**
   - The "AI understood your bathroom" step is keyword matching.
   - Sets, scenes and pin positions are illustrative.
@@ -63,7 +70,8 @@ The server exposes only the concept landing page (`/`), `viz.html`, `view.html` 
 - **Doors, windows and fans** are wall-only. They snap to the nearest wall while dragging, arrow keys move them along the
   wall, and R moves them to the next wall.
 - The mirror is part of the vanity. Placing a vanity adds **faucet** and **mirror** slots in Step 2.
-- Doors, windows and fans feed the AI prompt; they aren't product slots.
+- Doors, windows and fans become openings and fixtures in the 3D layout scene; they aren't product slots.
+- The 3D preview below the plan updates as you edit. Rooms are rectangular, with an 8 ft ceiling (see `SIZE3D.ceiling`).
 
 ## Interactions (`js/interactions.js`)
 - **Sticky header:** the brand bar scrolls away, the main nav sticks with a shadow, hides while you scroll down, and comes back as soon as you scroll up.
@@ -88,6 +96,8 @@ The server exposes only the concept landing page (`/`), `viz.html`, `view.html` 
 | `js/interactions.js` | Sticky header, mega menus, overlays, newsletter states, scroll reveal, Kohler View QR / mobile handoff. |
 | `viz.html` + `js/viz.js` | Kohler Viz app (hash routes, so the back button works). Session state in sessionStorage. |
 | `view.html` + `js/view.js` | Kohler View AR app: live camera, drag / pinch / twist placement, finishes, capture. |
+| `js/scene3d.js` | Kohler Viz's stand-in 3D layout scene: build from plan, preset cameras, layout/depth export, product projection. |
+| `content/ai-config.json` | Render settings: proxy function URL, image size, angles, cooldown, daily limit. No secrets. |
 | `js/fixtures.js` | SVG drawings: fixtures (top + front view, recoloured by finish) and wall-only door, window and fan for the floorplan. Used as fallbacks when a product photo can't load. |
 | `apps.css` | App components (see Inferred components). |
 | `content/viz.json` | App data: real KOHLER products per fixture (SKU, image, page URL, AR cut-out), bathroom sets, sample scenes and pins, copy, AI settings (`copy.ai`: endpoint, model, timeout, disclosure). |
@@ -140,13 +150,15 @@ Taken **directly** from Kohler's CSS: token values, button, input and focus styl
 - **Web apps (`apps.css`, all inferred):** compact app header with step progress, sticky action bar, intro split, toggle chips, fixture chips, AI analysis box, photo drop zone, floorplan builder, choice cards, selectable set cards, fixture slots, sticky local nav with product strip, generating state, render with pins and tooltips, saved and next-step cards, AR viewport with tools, bottom-sheet product tray, finish swatches, shutter and capture sheet, camera pre-permission card, toast.
 - **Landing additions:** `experienceHub` tiles, `.badge--new`, centered QR dialog.
 - **Refinements:** wall-only floorplan items, real product photo cards (`.pimg`), AI render tabs, cooldown on Regenerate.
+- **Render plan V2 (Nov 9):** 3D layout preview with camera chips and legend, export dialog, angle tabs, real-product cut-out overlay and "in this view" strip, AI passcode / photo-consent dialog.
 - **New tokens:** metal finish swatches (`--c-finish-*`) and `--c-error-on-dark`, both marked in `tokens.css`.
 - **Not built:** country picker and video playback.
 
 ## Build plan
 1. **Done:** design system, plus the landing page restructured to the Figma sitemap.
 2. **Done (prototype):** Kohler Viz and Kohler View.
-3. **Next:** Arnav's content changes. Edit `content/concept.json` for the landing page and `content/viz.json` for the apps. Confirm the "Signature lineup(s)" mapping.
+3. **Done (code):** render plan V2, Phases 0, 1 and 3, the site side of Phase 2, and the proxy function (`../kohler-viz-proxy`). Waiting on: the Google key and spend cap, the Vercel deploy, then Phase 4 (evaluation with `kohler-viz-proxy/scripts/eval.mjs`).
+4. **Next:** Arnav's content changes. Edit `content/concept.json` for the landing page and `content/viz.json` for the apps. Confirm the "Signature lineup(s)" mapping.
 
 ## Owner
 Arnav, UX design student. This is a portfolio and pitch piece.

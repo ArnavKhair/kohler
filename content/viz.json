@@ -38,10 +38,33 @@
    "endpoint": "https://image.pollinations.ai/prompt/",
    "model": "turbo",
    "timeoutMs": 30000,
-   "label": "AI-generated illustration. Products are approximate; see the list for the real KOHLER products.",
-   "disclosure": "Kohler Viz sends your room description and product names (never your photos) to Pollinations, a free third-party AI image service, to draw this preview.",
-   "failed": "The AI render is unavailable right now, so you are seeing a sample photo instead.",
-   "limited": "The free AI model is busy or rate-limited (about one image every 40 seconds), so you are seeing a sample photo for now. Try Regenerate in a moment."
+   "label": "AI-generated, approximate preview. Products may differ from the real KOHLER products listed beside it.",
+   "standinLabel": "3D layout preview with real KOHLER product photos. Approximate.",
+   "overlayLabel": "Show the real product photos on the image",
+   "disclosure": "Kohler Viz sends a 3D layout image of your room, the KOHLER product names and photos and a short caption to Google's Gemini image model through the Kohler Viz team's server. Your own photos are sent only if you agree first.",
+   "disclosureFree": "Kohler Viz sends a text description of your room layout and product names (never your photos) to Pollinations, a free third-party AI image service, to draw this preview.",
+   "photoNote": "Photos stay on your device unless you agree to send one for the AI render.",
+   "photoNoteFree": "Photos stay on your device in this prototype.",
+   "failed": "The AI render is unavailable right now, so you are seeing the 3D layout of your room with the real product photos instead.",
+   "limited": "The AI model is busy or rate-limited, so you are seeing the 3D layout of your room for now. Try Regenerate in a moment.",
+   "auth": "The team passcode was not accepted, so you are seeing the 3D layout of your room. Regenerate to enter it again.",
+   "nopass": "AI rendering was skipped, so you are seeing the 3D layout of your room with the real product photos.",
+   "daily": "You have reached today's AI render limit on this device, so you are seeing the 3D layout of your room.",
+   "standin": "This angle shows the 3D layout of your room. The free AI model renders one view only.",
+   "lost": "The AI images are kept only while this tab is open. Regenerate to render them again.",
+   "gateTitle": "Render with AI",
+   "gatePass": "Team passcode",
+   "gatePassHelp": "Ask the Kohler Viz team for the passcode. It is kept only in this tab.",
+   "gateConsent": "Send my first bathroom photo to Google's image model through the Kohler Viz team's server, so the products are drawn into my own photo.",
+   "gateConsentHelp": "Without this, Kohler Viz uses the 3D layout of your room and your photos stay on your device.",
+   "gateGo": "Render with AI",
+   "gateSkip": "Skip AI, Show the 3D Layout",
+   "preparing": "Building your room in 3D…",
+   "preparingTab": "Preparing",
+   "rendering": "Rendering this angle…",
+   "renderingHint": "Each angle takes about 10 to 20 seconds.",
+   "readyHint": "Open a finished angle while the rest render.",
+   "interrupted": "Rendering stopped before it finished (the page was reloaded or closed). Regenerate to render the angles again."
   }
  },
  "roomTypes": [
@@ -96,12 +119,6 @@
   ]
  },
  "describeExample": "A small guest bathroom with a white toilet, a single vanity with a chrome faucet, a mirror above it and a shower over the tub. Warm wood floor, lots of daylight.",
- "stages": [
-  "Reading your room",
-  "Placing your products",
-  "Matching finishes",
-  "Lighting the scene"
- ],
  "collections": {
   "toilet": [
    {
