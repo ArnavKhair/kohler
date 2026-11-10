@@ -20,6 +20,8 @@ python serve.py          # then open http://localhost:8000/
 ```
 The server exposes only the concept landing page (`/`), `viz.html`, `view.html` and the files they use. Everything else returns 404 (`current.html`, `design-system.html`, `source/`…). Pages load JSON, so they won't work from `file://`.
 
+**Publishing:** every push to `main` runs `.github/workflows/publish-site.yml`. It copies the public files (the same set `serve.py` serves, with `concept.html` as `index.html`) to the `gh-pages` branch, which GitHub Pages serves. Don't edit `gh-pages` by hand. The workflow stops if anything that looks like an API key is in those files. To re-publish without a change, use **Actions → Publish site → Run workflow**.
+
 **Testing Kohler View on a phone:** the camera needs HTTPS, and a QR code that points to `localhost` won't open on a phone. Deploy to GitHub Pages (HTTPS) and scan the QR code from the desktop site. On a desktop browser, `view.html?demo=1` previews the mobile flow, using the webcam or a sample photo.
 
 ## Sitemap → pages

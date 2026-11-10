@@ -1,0 +1,67 @@
+# Publishes the live site (GitHub Pages, built from the gh-pages branch) every time main changes.
+# It copies only the public files (the same set serve.py serves), uses concept.html as index.html,
+# and refuses to publish if anything that looks like an API key ended up in those files.
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}   # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write         # lets this workflow push to gh-pages
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build the public site
+        run: |
+          set -euo pipefail
+          mkdir -p _site/content _site/js
+          cp concept.html _site/index.html
+          cp concept.html viz.html view.html tokens.css components.css apps.css _site/
+          cp content/chrome.json content/concept.json content/viz.json content/ai-config.json _site/content/
+          cp js/*.js _site/js/
+          cp -r assets _site/assets
+          touch _site/.nojekyll
+          cat > _site/README.md <<'EOF'
+          # Kohler redesign prototype (live site)
+
+          For prototype purposes only. An unofficial redesign study, not affiliated with or endorsed by Kohler Co. Kohler® is a trademark of Kohler Co.
+
+          Source: `main` branch. This branch is published automatically by .github/workflows/publish-site.yml; do not edit it by hand.
+          EOF
+          sed -i 's/^          //' _site/README.md
+
+      - name: Refuse to publish secrets
+        run: |
+          if grep -rnE 'AIza[0-9A-Za-z_-]{20,}|AQ\.[0-9A-Za-z_-]{30,}' _site; then
+            echo "::error::Something that looks like a Google API key is in the site files. Not publishing."
+            exit 1
+          fi
+
+      - name: Update the gh-pages branch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git worktree add _publish origin/gh-pages
+          rsync -a --delete --exclude .git _site/ _publish/
+          cd _publish
+          git add -A
+          if git diff --cached --quiet; then
+            echo "The live site is already up to date."
+            exit 0
+          fi
+          git commit -m "Publish site from main @ ${GITHUB_SHA::7}"
+          git push origin HEAD:gh-pages
