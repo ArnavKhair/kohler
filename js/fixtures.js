@@ -53,6 +53,19 @@
       top: S('0 0 20 12', `<rect x="1" y="1" width="18" height="10" rx="1.5" fill="var(--c-white)" ${W} stroke-width="1"/><path d="M4 4h12M4 6h12M4 8h12" ${W} stroke-width=".8"/>`) }
   });
 
+  // 3D stand-in sizes for Kohler Viz's layout scene (feet). TYPICAL US sizes, not measured from each SKU: replace with
+  // Kohler's product data feed (height, depth, width per product) when available. h = height above the floor.
+  const SIZE3D = {
+    toilet: { h: 2.6, seat: 1.4, w: 1.6, d: 2.5 },
+    vanity: { h: 2.85, w: 2.9, d: 1.8 },          // cabinet + top; the basin sits in the top
+    mirror: { h: 3.3, w: 2, bottom: 3.9 },         // hung above the vanity
+    faucet: { h: .55 },
+    tub: { h: 1.75, w: 2.7, d: 5 },
+    shower: { h: 6.6, tray: .2, head: 6.8 },
+    door: { h: 6.7 }, window: { sill: 3.2, top: 6.6 }, fan: { h: .9, top: 7.6 },
+    ceiling: 8
+  };
+
   // finish swatches (names are generic finish families; colours from tokens.css)
   const FINISHES = {
     metal: [
@@ -69,5 +82,5 @@
     ]
   };
 
-  window.KohlerFixtures = { TYPES, FINISHES };
+  window.KohlerFixtures = { TYPES, FINISHES, SIZE3D };
 })();
